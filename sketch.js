@@ -77,8 +77,7 @@ function draw(){
     bird.display();
     platform.display();
     //log6.display();
-    slingshot.display();
-    console.log(bird.body.speed);    
+    slingshot.display();   
 }
 
 function mouseDragged(){
@@ -108,7 +107,7 @@ async function getBackgroundImg(){
     var datetime = responseJSON.datetime;
     var hour = datetime.slice(11,13);
     
-    if(hour>=0600 && hour<=1900){
+    if(hour>=06 && hour<=19){
         bg = "sprites/bg1.png";
     }
     else{
@@ -116,5 +115,5 @@ async function getBackgroundImg(){
     }
 
     backgroundImg = loadImage(bg);
-    console.log(backgroundImg);
+
 }
